@@ -207,6 +207,9 @@ namespace insure_fixlast.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<decimal>("Claim")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -218,20 +221,10 @@ namespace insure_fixlast.Migrations
                     b.Property<int?>("OrderDetailId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("benefit")
-                        .IsRequired()
+                    b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("isDelete")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<decimal>("price")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("rank")
+                    b.Property<int>("Time")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

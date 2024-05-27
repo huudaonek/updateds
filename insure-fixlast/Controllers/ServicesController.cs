@@ -24,7 +24,10 @@ namespace insure_fixlast.Controllers
         {
             return View(await _context.Service.ToListAsync());
         }
-
+        public async Task<IActionResult> UserService()
+        {
+            return View(await _context.Service.ToListAsync());
+        }
         // GET: Services/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -54,7 +57,7 @@ namespace insure_fixlast.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,benefit,price,rank,Quantity")] Service service)
+        public async Task<IActionResult> Create([Bind("Id,Description,Name,Price,Claim,Time")] Service service)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +89,7 @@ namespace insure_fixlast.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,benefit,price,rank,Quantity")] Service service)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Description,Name,Price,Claim,Time")] Service service)
         {
             if (id != service.Id)
             {

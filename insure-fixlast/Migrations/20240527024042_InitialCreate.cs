@@ -169,13 +169,11 @@ namespace insure_fixlast.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: false),
-                    benefit = table.Column<string>(type: "TEXT", nullable: false),
-                    price = table.Column<decimal>(type: "TEXT", nullable: false),
-                    rank = table.Column<int>(type: "INTEGER", nullable: false),
-                    Quantity = table.Column<int>(type: "INTEGER", nullable: false),
-                    isDelete = table.Column<bool>(type: "INTEGER", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Claim = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Time = table.Column<int>(type: "INTEGER", nullable: false),
                     OrderDetailId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>

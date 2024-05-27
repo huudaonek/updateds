@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("insure-fixlast")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a324c64967cf67a1226328990628deef2effa6e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8c85a965aab614c0da91a96b23fda1b0690d6ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("insure-fixlast")]
 [assembly: System.Reflection.AssemblyTitleAttribute("insure-fixlast")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

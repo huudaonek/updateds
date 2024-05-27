@@ -1,4 +1,6 @@
-﻿namespace insure_fixlast.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace insure_fixlast.Models
 {
     public class Employee
     {
@@ -13,6 +15,35 @@
         public ICollection<EmployeeSubService> EmployeeSubServices { get; set; }
         public bool isDelete { get; set; } = false;
     }
+    public class Register
+    {
+        // Account Information
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(100, MinimumLength = 3)]
+        public string Name { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        // Employee Information
+        [Required]
+        public string EmployeeName { get; set; }
+
+        [Required]
+        public Level Level { get; set; }
+
+        [Required]
+        public string EmployeeAddress { get; set; }
+
+        [Required]
+        [Phone]
+        public string EmployeePhone { get; set; }
+    }
 
     public enum Level
     {
@@ -20,5 +51,6 @@
         admin,
         employee
     }
+
 }
     
