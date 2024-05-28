@@ -17,7 +17,6 @@ namespace insure_fixlast.Data
         public DbSet<insure_fixlast.Models.Claim> Claim { get; set; } = default!;
         public DbSet<insure_fixlast.Models.Company> Company { get; set; } = default!;
         public DbSet<insure_fixlast.Models.Employee> Employee { get; set; } = default!;
-        public DbSet<insure_fixlast.Models.EmployeeSubService> EmployeeSubService { get; set; } = default!;
         public DbSet<insure_fixlast.Models.Order> Order { get; set; } = default!;
         public DbSet<insure_fixlast.Models.OrderDetail> OrderDetail { get; set; } = default!;
         public DbSet<insure_fixlast.Models.Service> Service { get; set; } = default!;
@@ -28,7 +27,6 @@ namespace insure_fixlast.Data
             modelBuilder.Entity<Account>().ToTable("Account");
             modelBuilder.Entity<Company>().ToTable("Company");
             modelBuilder.Entity<Employee>().ToTable("Employee");
-            modelBuilder.Entity<EmployeeSubService>().ToTable("EmployeeSubService");
             modelBuilder.Entity<Order>().ToTable("Order");
             modelBuilder.Entity<OrderDetail>().ToTable("OrderDetail");
             modelBuilder.Entity<Service>().ToTable("Service");

@@ -13,4 +13,6 @@ namespace insure_fixlast.Models
         public int Time { get; set; }
 
     }
+
+ 
 }

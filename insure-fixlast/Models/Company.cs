@@ -14,4 +14,14 @@ namespace insure_fixlast.Models
 		public ICollection<Employee> Employees { get; set; }
         public bool isDelete { get; set; } = false; 
     }
+    public class CheckoutViewModel
+    {
+        public List<Service> SelectedServices { get; set; }
+        public Dictionary<int, int> ServiceQuantities { get; set; }
+        public string CompanyName { get; set; }
+        public string CompanyEmail { get; set; }
+        public string CompanyPhone { get; set; }
+        public string CompanyAddress { get; set; }
+    }
+
 }

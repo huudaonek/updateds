@@ -1,0 +1,25 @@
+﻿@model IEnumerable<insure_fixlast.Models.Service>
+
+<!-- Đoạn mã HTML hiển thị bảng dịch vụ đã chọn -->
+<h1>Review Order</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in ViewBag.SelectedServices)
+        {
+            <tr>
+                <td>@service.Id</td>
+                <td>@service.Name</td>
+                <td>@ViewBag.ServiceQuantities[service.Id]</td>
+                <td>@(service.Price * ViewBag.ServiceQuantities[service.Id])</td>
+            </tr>
+        }
+    </tbody>
+</table>

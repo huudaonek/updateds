@@ -12,7 +12,6 @@ namespace insure_fixlast.Models
         public int CompanyId { get; set; }
         public Company Company { get; set; }
         public ICollection<Claim> Claims { get; set; }
-        public ICollection<EmployeeSubService> EmployeeSubServices { get; set; }
         public bool isDelete { get; set; } = false;
     }
     public class Register
